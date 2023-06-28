@@ -1,0 +1,1 @@
+gsutil cp "D:\CDE\Quality Thoughts Training\Pyn Prct prgms\Rev_Pyramid.py" gs://anil5b8
