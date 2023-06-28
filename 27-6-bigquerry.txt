@@ -1,0 +1,425 @@
+Welcome to the Google Cloud CLI! Run "gcloud -h" to get the list of available commands.
+---
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>gcloud init
+Welcome! This command will take you through the configuration of gcloud.
+
+Settings from your current configuration [default] are:
+accessibility:
+  screen_reader: 'False'
+auth:
+  service_account_use_self_signed_jwt: None
+compute:
+  region: asia-south1
+  zone: asia-south1-c
+core:
+  account: veeravenkataanilkumar1@gmail.com
+  disable_usage_reporting: 'True'
+  project: gcp17-11
+
+Pick configuration to use:
+ [1] Re-initialize this configuration [default] with new settings
+ [2] Create a new configuration
+Please enter your numeric choice:  1
+
+Your current configuration has been set to: [default]
+
+You can skip diagnostics next time by using the following flag:
+  gcloud init --skip-diagnostics
+
+Network diagnostic detects and fixes local network connection issues.
+Checking network connection...done.
+Reachability Check passed.
+Network diagnostic passed (1/1 checks passed).
+
+Choose the account you would like to use to perform operations for this configuration:
+ [1] anilkumarpaidipati123@gmail.com
+ [2] veeravenkataanilkumar1@gmail.com
+ [3] Log in with a new account
+Please enter your numeric choice:  2
+
+You are logged in as: [veeravenkataanilkumar1@gmail.com].
+
+Pick cloud project to use:
+ [1] gcp17-11
+ [2] massive-hexagon-389904
+ [3] Enter a project ID
+ [4] Create a new project
+Please enter numeric choice or text value (must exactly match list item):  1
+
+Your current project has been set to: [gcp17-11].
+
+Do you want to configure a default Compute Region and Zone? (Y/n)?  y
+
+Which Google Compute Engine zone would you like to use as project default?
+If you do not specify a zone via a command line flag while working with Compute Engine resources, the default is
+assumed.
+ [1] us-east1-b
+ [2] us-east1-c
+ [3] us-east1-d
+ [4] us-east4-c
+ [5] us-east4-b
+ [6] us-east4-a
+ [7] us-central1-c
+ [8] us-central1-a
+ [9] us-central1-f
+ [10] us-central1-b
+ [11] us-west1-b
+ [12] us-west1-c
+ [13] us-west1-a
+ [14] europe-west4-a
+ [15] europe-west4-b
+ [16] europe-west4-c
+ [17] europe-west1-b
+ [18] europe-west1-d
+ [19] europe-west1-c
+ [20] europe-west3-c
+ [21] europe-west3-a
+ [22] europe-west3-b
+ [23] europe-west2-c
+ [24] europe-west2-b
+ [25] europe-west2-a
+ [26] asia-east1-b
+ [27] asia-east1-a
+ [28] asia-east1-c
+ [29] asia-southeast1-b
+ [30] asia-southeast1-a
+ [31] asia-southeast1-c
+ [32] asia-northeast1-b
+ [33] asia-northeast1-c
+ [34] asia-northeast1-a
+ [35] asia-south1-c
+ [36] asia-south1-b
+ [37] asia-south1-a
+ [38] australia-southeast1-b
+ [39] australia-southeast1-c
+ [40] australia-southeast1-a
+ [41] southamerica-east1-b
+ [42] southamerica-east1-c
+ [43] southamerica-east1-a
+ [44] asia-east2-a
+ [45] asia-east2-b
+ [46] asia-east2-c
+ [47] asia-northeast2-a
+ [48] asia-northeast2-b
+ [49] asia-northeast2-c
+ [50] asia-northeast3-a
+Did not print [63] options.
+Too many options [113]. Enter "list" at prompt to print choices fully.
+Please enter numeric choice or text value (must exactly match list item):  1
+
+Your project default Compute Engine zone has been set to [us-east1-b].
+You can change it by running [gcloud config set compute/zone NAME].
+
+Your project default Compute Engine region has been set to [us-east1].
+You can change it by running [gcloud config set compute/region NAME].
+
+Your Google Cloud SDK is configured and ready to use!
+
+* Commands that require authentication will use veeravenkataanilkumar1@gmail.com by default
+* Commands will reference project `gcp17-11` by default
+* Compute Engine commands will use region `us-east1` by default
+* Compute Engine commands will use zone `us-east1-b` by default
+
+Run `gcloud help config` to learn how to change individual settings
+
+This gcloud configuration is called [default]. You can create additional configurations if you work with multiple accounts and/or projects.
+Run `gcloud topic configurations` to learn more.
+
+Some things to try next:
+
+* Run `gcloud --help` to see the Cloud Platform services you can interact with. And run `gcloud help COMMAND` to get help on any gcloud command.
+* Run `gcloud topic --help` to learn about advanced features of the SDK like arg files and output formatting
+* Run `gcloud cheat-sheet` to see a roster of go-to `gcloud` commands.
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>gsutil ls
+gs://anil5b8/
+gs://gcp17-11/
+gs://gcp17-a10/
+gs://gcp17-anil/
+gs://gcp17-anil5/
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>gsutil ls gs://anil5b8
+gs://anil5b8/userdata1.avro
+gs://anil5b8/userdata1.csv
+gs://anil5b8/userdata1.json
+gs://anil5b8/userdata1.parquet
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq ls
+   datasetId
+ -------------
+  anil5b8
+  anil_kumar
+  dataset1
+  gcp17_anil
+  sales_hist
+  sales_stg
+  sales_views
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq ls anil5b8
+    tableId      Type    Labels   Time Partitioning   Clustered Fields
+ -------------- ------- -------- ------------------- ------------------
+  avrotable      TABLE
+  csvtable       TABLE
+  jsontable      TABLE
+  parquettable   TABLE
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq mk -d repachese
+Dataset 'gcp17-11:repachese' successfully created.
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq rm -d repachese
+rm: remove dataset 'gcp17-11:repachese'? (y/N) y
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq mk -d repurchase_stage
+Dataset 'gcp17-11:repurchase_stage' successfully created.
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq mk -d repurchase_histiry
+Dataset 'gcp17-11:repurchase_histiry' successfully created.
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq rm -d repurchase_histiry
+rm: remove dataset 'gcp17-11:repurchase_histiry'? (y/N) y
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq mk -d repurchase_history
+Dataset 'gcp17-11:repurchase_history' successfully created.
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq mk -t repurchase_stage.stage_table
+Table 'gcp17-11:repurchase_stage.stage_table' successfully created.
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq rm -t repurchase_stage.stage_table
+rm: remove table 'gcp17-11:repurchase_stage.stage_table'? (y/N) y
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq ls
+      datasetId
+ --------------------
+  anil5b8
+  anil_kumar
+  dataset1
+  gcp17_anil
+  repurchase_history
+  repurchase_stage
+  sales_hist
+  sales_stg
+  sales_views
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq mk -t repurchase_stage.stage_table cid:string, upc:string, oid:string, dt:string, r_dt:string, prc:string, qty:string, amt:string, r_qty:string, r_amt:string, web_prod_id:string, GMM_DESC:string, PARENT_MDSE_DIVN_DESC:string, Last_Modifies_Time:string, Country_code:string, ENTITY_CODE:string,
+Too many positional args, still have ['upc:string,', 'oid:string,', 'dt:string,', 'r_dt:string,', 'prc:string,', 'qty:string,', 'amt:string,', 'r_qty:string,', 'r_amt:string,', 'web_prod_id:string,', 'GMM_DESC:string,', 'PARENT_MDSE_DIVN_DESC:string,', 'Last_Modifies_Time:string,', 'Country_code:string,', 'ENTITY_CODE:string,']
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq mk -t repurchase_stage.stage_table cid:string, upc:string, oid:string, dt:string, r_dt:string, prc:string, qty:string, amt:string, r_qty:string, r_amt:string, web_prod_id:string, GMM_DESC:string, PARENT_MDSE_DIVN_DESC:string, Last_Modifies_Time:string, Country_code:string, ENTITY_CODE:string
+Too many positional args, still have ['upc:string,', 'oid:string,', 'dt:string,', 'r_dt:string,', 'prc:string,', 'qty:string,', 'amt:string,', 'r_qty:string,', 'r_amt:string,', 'web_prod_id:string,', 'GMM_DESC:string,', 'PARENT_MDSE_DIVN_DESC:string,', 'Last_Modifies_Time:string,', 'Country_code:string,', 'ENTITY_CODE:string']
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq mk -t repurchase_stage.stage_table cid:string, upc:string, oid:string, dt:string, r_dt:string, prc:string, qty:string, amt:string, r_qty:string, r_amt:string, web_prod_id:string, GMM_DESC:string, PARENT_MDSE_DIVN_DESC:string, Last_Modifies_Time:string, Country_code:string, ENTITY_CODE:string
+Too many positional args, still have ['upc:string,', 'oid:string,', 'dt:string,', 'r_dt:string,', 'prc:string,', 'qty:string,', 'amt:string,', 'r_qty:string,', 'r_amt:string,', 'web_prod_id:string,', 'GMM_DESC:string,', 'PARENT_MDSE_DIVN_DESC:string,', 'Last_Modifies_Time:string,', 'Country_code:string,', 'ENTITY_CODE:string']
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq mk -t repurchase_stage.stage_table cid:string, upc:string, oid:string, dt:string, r_dt:string, prc:string, qty:string, amt:string, r_qty:string, r_amt:string, web_prod_id:string, GMM_DESC:string, PARENT_MDSE_DIVN_DESC:string, Last_Modifies_Time:string, Country_code:string, ENTITY_CODE:string
+Too many positional args, still have ['upc:string,', 'oid:string,', 'dt:string,', 'r_dt:string,', 'prc:string,', 'qty:string,', 'amt:string,', 'r_qty:string,', 'r_amt:string,', 'web_prod_id:string,', 'GMM_DESC:string,', 'PARENT_MDSE_DIVN_DESC:string,', 'Last_Modifies_Time:string,', 'Country_code:string,', 'ENTITY_CODE:string']
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bqmk-trepurchase_stage.stage_tablecid:string,upc:string,oid:string,dt:string,r_dt:string,prc:string,qty:string,amt:string,r_qty:string,r_amt:string,web_prod_id:string,GMM_DESC:string,PARENT_MDSE_DIVN_DESC:string,Last_Modifies_Time:string,Country_code:string,ENTITY_CODE:string
+The filename, directory name, or volume label syntax is incorrect.
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bqmk-trepurchase_stage.stage_tablecid:string,upc:string,oid:string,dt:string,r_dt:string,prc:string,qty:string,amt:string,r_qty:string,r_amt:string,web_prod_id:string,GMM_DESC:string,PARENT_MDSE_DIVN_DESC:string,Last_Modifies_Time:string,Country_code:string,ENTITY_CODE:string
+The filename, directory name, or volume label syntax is incorrect.
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq mk -t repurchase_stage.stage_table cid:string,upc:string,oid:string,dt:string,r_dt:string,prc:string,qty:string,amt:string,r_qty:string,r_amt:string,web_prod_id:string,GMM_DESC:string,PARENT_MDSE_DIVN_DESC:string,Last_Modifies_Time:string,Country_code:string,ENTITY_CODE:string,
+BigQuery error in mk operation: Invalid schema entry:
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq mk -t repurchase_stage.stage_table cid:string,upc:string,oid:string,dt:string,r_dt:string,prc:string,qty:string,amt:string,r_qty:string,r_amt:string,web_prod_id:string,GMM_DESC:string,PARENT_MDSE_DIVN_DESC:string,Last_Modifies_Time:string,Country_code:string,ENTITY_CODE:string
+Table 'gcp17-11:repurchase_stage.stage_table' successfully created.
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq show repurchase_stage.stage_table
+Table gcp17-11:repurchase_stage.stage_table
+
+   Last modified                 Schema                Total Rows   Total Bytes   Expiration   Time Partitioning   Clustered Fields   Total Logical Bytes   Total Physical Bytes   Labels
+ ----------------- ---------------------------------- ------------ ------------- ------------ ------------------- ------------------ --------------------- ---------------------- --------
+  27 Jun 16:42:59   |- cid: string                     0            0
+              0
+                    |- upc: string
+
+                    |- oid: string
+
+                    |- dt: string
+
+                    |- r_dt: string
+
+                    |- prc: string
+
+                    |- qty: string
+
+                    |- amt: string
+
+                    |- r_qty: string
+
+                    |- r_amt: string
+
+                    |- web_prod_id: string
+
+                    |- GMM_DESC: string
+
+                    |- PARENT_MDSE_DIVN_DESC: string
+
+                    |- Last_Modifies_Time: string
+
+                    |- Country_code: string
+
+                    |- ENTITY_CODE: string
+
+
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq load --source_format=CSV --skip_leading_rows=1 repurchase_stage.stage_table "D:\CDE\Quality Thoughts Training\Usecases\usecase1\Repurchase_Product.csv"
+Upload complete.
+Waiting on bqjob_r31328b0313f007e9_00000188fc8ff05e_1 ... (0s) Current status: DONE
+BigQuery error in load operation: Error processing job
+'gcp17-11:bqjob_r31328b0313f007e9_00000188fc8ff05e_1': Error while reading data,
+error message: CSV table references column position 15, but line starting at
+position:88 contains only 13 columns.
+Failure details:
+- Error while reading data, error message: CSV processing encountered
+too many errors, giving up. Rows: 0; errors: 1; max bad: 0; error
+percent: 0
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq rm -t repurchase_stage.stage_table cid:string,upc:string,oid:string,dt:string,r_dt:string,prc:string,qty:string,amt:string,r_qty:string,r_amt:string,web_prod_id:string,GMM_DESC:string,PARENT_MDSE_DIVN_DESC:string,Last_Modifies_Time:string,Country_code:string,ENTITY_CODE:string,
+Too many positional args, still have ['cid:string,upc:string,oid:string,dt:string,r_dt:string,prc:string,qty:string,amt:string,r_qty:string,r_amt:string,web_prod_id:string,GMM_DESC:string,PARENT_MDSE_DIVN_DESC:string,Last_Modifies_Time:string,Country_code:string,ENTITY_CODE:string,']
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq rm -t repurchase_stage.stage_table cid:string,upc:string,oid:string,dt:string,r_dt:string,prc:string,qty:string,amt:string,r_qty:string,r_amt:string,web_prod_id:string,GMM_DESC:string,PARENT_MDSE_DIVN_DESC:string,Last_Modifies_Time:string,Country_code:string,ENTITY_CODE:string
+Too many positional args, still have ['cid:string,upc:string,oid:string,dt:string,r_dt:string,prc:string,qty:string,amt:string,r_qty:string,r_amt:string,web_prod_id:string,GMM_DESC:string,PARENT_MDSE_DIVN_DESC:string,Last_Modifies_Time:string,Country_code:string,ENTITY_CODE:string']
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq mk -t repurchase_stage.stage_table cid:string,upc:string,oid:string,dt:string,r_dt:string,prc:string,qty:string,amt:string,r_qty:string,r_amt:string,web_prod_id:string,GMM_DESC:string,PARENT_MDSE_DIVN_DESC:string,Last_Modifies_Time:string,Country_code:string,ENTITY_CODE:string
+Table 'gcp17-11:repurchase_stage.stage_table' successfully created.
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq mk -t repurchase_stage.stage_table cid:string,upc:string,oid:string,dt:string,r_dt:string,prc:string,qty:string,amt:string,r_qty:string,r_amt:string,web_prod_id:string,GMM_DESC:string,PARENT_MDSE_DIVN_DESC:string,Last_Modifies_Time:string
+BigQuery error in mk operation: Not found: Dataset gcp17-11:repurchase_stage
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq mk -d repurchase_stage
+Dataset 'gcp17-11:repurchase_stage' successfully created.
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq rm -t repurchase_stage.stage_table cid:string,upc:string,oid:string,dt:string,r_dt:string,prc:string,qty:string,amt:string,r_qty:string,r_amt:string,web_prod_id:string,GMM_DESC:string,PARENT_MDSE_DIVN_DESC:string,Last_Modifies_Time:string
+Too many positional args, still have ['cid:string,upc:string,oid:string,dt:string,r_dt:string,prc:string,qty:string,amt:string,r_qty:string,r_amt:string,web_prod_id:string,GMM_DESC:string,PARENT_MDSE_DIVN_DESC:string,Last_Modifies_Time:string']
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq mk -t repurchase_stage.stage_table cid:string,upc:string,oid:string,dt:string,r_dt:string,prc:string,qty:string,amt:string,r_qty:string,r_amt:string,web_prod_id:string,GMM_DESC:string,PARENT_MDSE_DIVN_DESC:string,Last_Modifies_Time:string
+Table 'gcp17-11:repurchase_stage.stage_table' successfully created.
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq load --source_format=CSV --skip_leading_rows=1 repurchase_stage.stage_table "D:\CDE\Quality Thoughts Training\Usecases\usecase1\Repurchase_Product.csv"
+Upload complete.
+Waiting on bqjob_r588af7af1102dfff_00000188fc9ca6f9_1 ... (0s) Current status: DONE
+BigQuery error in load operation: Error processing job
+'gcp17-11:bqjob_r588af7af1102dfff_00000188fc9ca6f9_1': Error while reading data,
+error message: CSV table references column position 13, but line starting at
+position:88 contains only 13 columns.
+Failure details:
+- Error while reading data, error message: CSV processing encountered
+too many errors, giving up. Rows: 0; errors: 1; max bad: 0; error
+percent: 0
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq mk -t repurchase_stage.stage_table cid:string,upc:string,oid:string,dt:string,r_dt:string,prc:string,qty:string,amt:string,r_qty:string,r_amt:string,web_prod_id:string,GMM_DESC:string,PARENT_MDSE_DIVN_DESC:string
+Table 'gcp17-11:repurchase_stage.stage_table' successfully created.
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq load --source_format=CSV --skip_leading_rows=1 repurchase_stage.stage_table "D:\CDE\Quality Thoughts Training\Usecases\usecase1\Repurchase_Product.csv"
+Upload complete.
+Waiting on bqjob_rec59b4b78cc79af_00000188fca06282_1 ... (0s) Current status: DONE
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>gsutil cp "D:\CDE\Quality Thoughts Training\Usecases\usecase1\Repurchase_P
+roduct.csv" gs://anil5b8
+Copying file://D:\CDE\Quality Thoughts Training\Usecases\usecase1\Repurchase_Product.csv [Content-Type=application/vnd.ms-excel]...
+\ [1 files][  2.0 MiB/  2.0 MiB]
+Operation completed over 1 objects/2.0 MiB.
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>gsutil ls gs://anil5b8
+gs://anil5b8/Repurchase_Product.csv
+gs://anil5b8/userdata1.avro
+gs://anil5b8/userdata1.csv
+gs://anil5b8/userdata1.json
+gs://anil5b8/userdata1.parquet
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq load --source_format=CSV --skip_leading_rows=1 repurchase_stage.stage_table "gs://anil5b8/Repurchase_Product.csv"
+Waiting on bqjob_r6ec45c33d6f3bd24_00000188fcb5ca12_1 ... (1s) Current status: DONE
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq show repurchase_stage.stage_table
+Table gcp17-11:repurchase_stage.stage_table
+
+   Last modified                 Schema                Total Rows   Total Bytes   Expiration   Time Partitioning   Clustered Fields   Total Logical Bytes   Total Physical Bytes   Labels
+ ----------------- ---------------------------------- ------------ ------------- ------------ ------------------- ------------------ --------------------- ---------------------- --------
+  27 Jun 17:25:55   |- cid: string                     43114        4509692
+              4509692               415272
+                    |- upc: string
+
+                    |- oid: string
+
+                    |- dt: string
+
+                    |- r_dt: string
+
+                    |- prc: string
+
+                    |- qty: string
+
+                    |- amt: string
+
+                    |- r_qty: string
+
+                    |- r_amt: string
+
+                    |- web_prod_id: string
+
+                    |- GMM_DESC: string
+
+                    |- PARENT_MDSE_DIVN_DESC: string
+
+
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq mk -t repurchase_history.history_table cid:int, upc:long, oid:long, dt:date, r_dt:date, prc:float, qty:int, amt:float, r_qty:int, r_amt:float, web_prod_id:int, GMM_DESC:string, PARENT_MDSE_DIVN_DESC:string, Last_Modifies_Time:timestamp, Country_code:string, ENTITY_CODE:string
+Too many positional args, still have ['upc:long,', 'oid:long,', 'dt:date,', 'r_dt:date,', 'prc:float,', 'qty:int,', 'amt:float,', 'r_qty:int,', 'r_amt:float,', 'web_prod_id:int,', 'GMM_DESC:string,', 'PARENT_MDSE_DIVN_DESC:string,', 'Last_Modifies_Time:timestamp,', 'Country_code:string,', 'ENTITY_CODE:string']
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq mk -t repurchase_history.history_table cid:int, upc:long, oid:long, dt:date, r_dt:date, prc:float, qty:int, amt:float, r_qty:int, r_amt:float, web_prod_id:int, GMM_DESC:string, PARENT_MDSE_DIVN_DESC:string, Last_Modifies_Time:timestamp, Country_code:string, ENTITY_CODE:string
+Too many positional args, still have ['upc:long,', 'oid:long,', 'dt:date,', 'r_dt:date,', 'prc:float,', 'qty:int,', 'amt:float,', 'r_qty:int,', 'r_amt:float,', 'web_prod_id:int,', 'GMM_DESC:string,', 'PARENT_MDSE_DIVN_DESC:string,', 'Last_Modifies_Time:timestamp,', 'Country_code:string,', 'ENTITY_CODE:string']
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq mk -t repurchase_history.history_table cid:int,upc:long,oid:long,dt:date,r_dt:date,prc:float,qty:int,amt:float,r_qty:int,r_amt:float,web_prod_id:int,GMM_DESC:string,PARENT_MDSE_DIVN_DESC:string,Last_Modifies_Time:timestamp,Country_code:string,ENTITY_CODE:string
+BigQuery error in mk operation: Invalid value for type: INT is not a valid value
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq mk -t repurchase_history.history_table cid:INTEGER,upc:long,oid:long,dt:date,r_dt:date,prc:float,qty:INTEGER,amt:float,r_qty:INTEGER,r_amt:float,web_prod_id:INTEGER,GMM_DESC:string,PARENT_MDSE_DIVN_DESC:string,Last_Modifies_Time:timestamp,Country_code:string,ENTITY_CODE:string
+BigQuery error in mk operation: Invalid value for type: LONG is not a valid
+value
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq mk -t repurchase_history.history_table cid:INTEGER,upc:INT64,oid:INT64,dt:date,r_dt:date,prc:float,qty:INTEGER,amt:float,r_qty:INTEGER,r_amt:float,web_prod_id:INTEGER,GMM_DESC:string,PARENT_MDSE_DIVN_DESC:string,Last_Modifies_Time:timestamp,Country_code:string,ENTITY_CODE:string
+Table 'gcp17-11:repurchase_history.history_table' successfully created.
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>bq show repurchase_history.history_table
+Table gcp17-11:repurchase_history.history_table
+
+   Last modified                 Schema                Total Rows   Total Bytes   Expiration   Time Partitioning   Clustered Fields   Total Logical Bytes   Total Physical Bytes   Labels
+ ----------------- ---------------------------------- ------------ ------------- ------------ ------------------- ------------------ --------------------- ---------------------- --------
+  27 Jun 17:53:41   |- cid: integer                    0            0
+              0
+                    |- upc: integer
+
+                    |- oid: integer
+
+                    |- dt: date
+
+                    |- r_dt: date
+
+                    |- prc: float
+
+                    |- qty: integer
+
+                    |- amt: float
+
+                    |- r_qty: integer
+
+                    |- r_amt: float
+
+                    |- web_prod_id: integer
+
+                    |- GMM_DESC: string
+
+                    |- PARENT_MDSE_DIVN_DESC: string
+
+                    |- Last_Modifies_Time: timestamp
+
+                    |- Country_code: string
+
+                    |- ENTITY_CODE: string
+
+
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>
+
+C:\Users\anilk\AppData\Local\Google\Cloud SDK>
